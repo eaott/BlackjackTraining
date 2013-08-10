@@ -1,0 +1,254 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    tools:ignore="ContentDescription" >
+
+    <Button
+        android:id="@+id/buttonHit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonStay"
+        android:layout_alignBottom="@+id/buttonStay"
+        android:layout_toLeftOf="@+id/buttonStay"
+        android:text="@string/hit" />
+
+    <Button
+        android:id="@+id/buttonDouble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonHit"
+        android:layout_alignBottom="@+id/buttonHit"
+        android:layout_toLeftOf="@+id/buttonHit"
+        android:text="@string/dbl" />
+
+    <Button
+        android:id="@+id/buttonSplit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/buttonDouble"
+        android:layout_toLeftOf="@+id/buttonDouble"
+        android:text="@string/split" />
+
+    <Button
+        android:id="@+id/buttonStay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="17dp"
+        android:layout_marginRight="3dp"
+        android:text="@string/stay" />
+
+    <ImageView
+        android:id="@+id/dealer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/c2" />
+    <ImageView
+        android:id="@+id/dealer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/dealer1"
+        android:layout_toRightOf="@+id/dealer1"
+        android:src="@drawable/b" />
+    <TextView
+        android:id="@+id/dealerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dealer1"
+        android:layout_alignLeft="@+id/dealer1"
+        android:text="@string/dealer" />
+    <ImageView
+        android:id="@+id/dealer3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/dealer2"
+        android:layout_toRightOf="@+id/dealer2"
+        android:src="@drawable/b" />
+    <ImageView
+        android:id="@+id/dealer4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/dealer3"
+        android:layout_alignTop="@+id/dealer3"
+        android:src="@drawable/b" />
+
+    <ImageView
+        android:id="@+id/dealer5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/dealer4"
+        android:layout_alignTop="@+id/dealer4"
+        android:src="@drawable/b" />
+    <ImageView
+        android:id="@+id/dealer6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/dealer5"
+        android:layout_alignTop="@+id/dealer5"
+        android:src="@drawable/b" />
+    <ImageView
+        android:id="@+id/dealer7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/dealer6"
+        android:layout_alignTop="@+id/dealer6"
+        android:src="@drawable/b" />
+    <ImageView
+        android:id="@+id/dealer8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/dealer7"
+        android:layout_alignTop="@+id/dealer7"
+        android:src="@drawable/b" />
+     <ImageView
+        android:id="@+id/user2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/user1"
+        android:layout_toRightOf="@+id/user1"
+        android:src="@drawable/b" />
+    <ImageView
+        android:id="@+id/user3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/user2"
+        android:layout_toRightOf="@+id/user2"
+        android:src="@drawable/b" />
+    <ImageView
+        android:id="@+id/user4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/user3"
+        android:layout_alignTop="@+id/user3"
+        android:src="@drawable/b" />
+    <ImageView
+        android:id="@+id/user5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/user4"
+        android:layout_alignTop="@+id/user4"
+        android:src="@drawable/b" />
+    <ImageView
+        android:id="@+id/user6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/user5"
+        android:layout_alignTop="@+id/user5"
+        android:src="@drawable/b" />
+    <ImageView
+        android:id="@+id/user7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/user6"
+        android:layout_alignTop="@+id/user6"
+        android:src="@drawable/b" />
+    <ImageView
+        android:id="@+id/user8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/user7"
+        android:layout_alignTop="@+id/user7"
+        android:src="@drawable/b" />
+
+    <ImageView
+        android:id="@+id/user1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonSplit"
+        android:layout_alignLeft="@+id/dealerText"
+        android:layout_marginBottom="78dp"
+        android:src="@drawable/c2" />
+
+    <TextView
+        android:id="@+id/userText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user1"
+        android:layout_below="@+id/user2"
+        android:layout_marginTop="18dp"
+        android:text="@string/you" />
+
+    <TextView
+        android:id="@+id/userScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/userText"
+        android:layout_alignBottom="@+id/userText"
+        android:layout_marginLeft="18dp"
+        android:layout_toRightOf="@+id/userText"
+        android:text="0"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/decision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/user8"
+        android:layout_centerVertical="true"
+        android:text="corr"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/dealerScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/dealerText"
+        android:layout_alignBottom="@+id/dealerText"
+        android:layout_alignLeft="@+id/userScore"
+        android:layout_marginLeft="18dp"
+        android:text="0"/>
+
+    <Button
+        android:id="@+id/buttonNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonSplit"
+        android:layout_toLeftOf="@+id/buttonSplit"
+        android:text="@string/newHand" />
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/decks"
+        android:layout_alignRight="@+id/dealer8"
+        android:layout_marginBottom="13dp"
+        android:text="cnt" />
+
+    <TextView
+        android:id="@+id/acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/decision"
+        android:layout_below="@+id/decision"
+        android:text="acc" />
+
+    <TextView
+        android:id="@+id/decks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/decision"
+        android:layout_alignRight="@+id/count"
+        android:layout_marginBottom="48dp"
+        android:text="decks" />
+
+    <TextView
+        android:id="@+id/win"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/decision"
+        android:layout_alignRight="@+id/decks"
+        android:layout_marginBottom="23dp"
+        android:text="win" />
+
+</RelativeLayout>
