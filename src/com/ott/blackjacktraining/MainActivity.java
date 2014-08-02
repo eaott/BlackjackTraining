@@ -45,11 +45,11 @@ public class MainActivity extends Activity
 	private TextView accView;
 	private TextView winView;
 	
-	public static final int NUM_DECKS = 6;
-	public static final byte HIT = 1;
-	public static final byte DOUBLE = 2;
-	public static final byte SPLIT = 4;
-	public static final byte STAY = 8;
+	public static final int NUM_DECKS = 8;
+	public static final byte HIT = 1 << 0;
+	public static final byte DOUBLE = 1 << 1;
+	public static final byte SPLIT = 1 << 2;
+	public static final byte STAY = 1 << 3;
 	
 	public static final String SCORE = "score";
 	public static final String DECK = "deck";
@@ -156,7 +156,7 @@ public class MainActivity extends Activity
 		{0, 0, SPLIT, SPLIT, SPLIT, SPLIT, SPLIT, SPLIT, HIT, HIT, HIT, HIT}, //2
 		{0, 0, SPLIT, SPLIT, SPLIT, SPLIT, SPLIT, SPLIT, SPLIT, HIT, HIT, HIT}, //3
 		{0, 0, HIT, HIT, SPLIT, SPLIT, SPLIT, HIT, HIT, HIT, HIT, HIT}, //4
-		{0, 0, DOUBLE, DOUBLE, DOUBLE, DOUBLE, DOUBLE, DOUBLE, DOUBLE, DOUBLE, HIT, HIT}, //5
+		{0, 0, DOUBLE|HIT, DOUBLE|HIT, DOUBLE|HIT, DOUBLE|HIT, DOUBLE|HIT, DOUBLE|HIT, DOUBLE|HIT, DOUBLE|HIT, HIT, HIT}, //5
 		{0, 0, SPLIT, SPLIT, SPLIT, SPLIT, SPLIT, SPLIT, HIT, HIT, HIT, HIT}, //6
 		{0, 0, SPLIT, SPLIT, SPLIT, SPLIT, SPLIT, SPLIT, SPLIT, HIT, STAY, HIT}, //7
 		{0, 0, SPLIT, SPLIT, SPLIT, SPLIT, SPLIT, SPLIT, SPLIT, SPLIT, SPLIT, SPLIT}, //8
@@ -542,13 +542,15 @@ public class MainActivity extends Activity
 		{
 			correct = 0;
 			decisions = 0;
+			wins = 0;
+			games = 0;
 			if (accView != null)
 				accView.setText("");
+			if (winView != null)
+				winView.setText("");
 			shuffle();
 			deal();
 		}
-		if (item.getItemId() == R.id.strategies)
-			startActivity(new Intent(getApplicationContext(), StrategyActivity.class));
 		return true;
 	}
 	
